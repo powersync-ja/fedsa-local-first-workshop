@@ -1,12 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { LoginDetailsWidget } from '@/components/widgets/LoginDetailsWidget';
 import { useSupabase } from '@/components/providers/SupabaseProvider';
 import { DEFAULT_ENTRY_ROUTE } from '@/app/router';
+import { usePowerSync } from '@powersync/react';
 
 export default function LoginPage() {
   const supabase = useSupabase();
+  const powerSync = usePowerSync();
   const navigate = useNavigate();
+
+  // Adding this to clear db from previous unauthenticated session
+  // Can remove after loading initially
+  useEffect(() => {
+    powerSync.disconnectAndClear();
+  }, []);
 
   return (
     <LoginDetailsWidget
