@@ -49,7 +49,6 @@ export default function TodoListsPage() {
         </S.FloatingActionButton>
         <Box>
           <SearchBarWidget />
-            <TodoListsWidget />
           <TodoListsWidget />
         </Box>
         <Dialog
