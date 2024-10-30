@@ -1,4 +1,4 @@
-# PowerSync + Supabase Web Demo: Todo List
+# PowerSync + Supabase Web FEDSA Workshop Demo: Todo List
 
 ## Overview
 
@@ -14,19 +14,13 @@ In the repo directory, to install dependencies:
 npm install
 ```
 
-Then switch into the demo's directory:
-
-```bash
-cd demos/react-supabase-todolist
-```
-
 Set up the Environment variables: Copy the `.env.local.template` file:
 
 ```bash
 cp .env.local.template .env.local
 ```
 
-And then edit `.env.local` to insert your credentials for Supabase.
+And then edit `.env.local` to insert your credentials for Supabase and PowerSync.
 
 Run the development server:
 
