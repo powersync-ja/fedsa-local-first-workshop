@@ -22,8 +22,6 @@ import { TodoListsWidget } from '@/components/widgets/TodoListsWidget';
 export default function TodoListsPage() {
   const powerSync = usePowerSync();
   const supabase = useSupabase();
-  const status = useStatus();
-  console.log('status', status);
 
   const [showPrompt, setShowPrompt] = React.useState(false);
   const nameInputRef = React.createRef<HTMLInputElement>();
@@ -51,8 +49,7 @@ export default function TodoListsPage() {
         </S.FloatingActionButton>
         <Box>
           <SearchBarWidget />
-          {/* TODO: Add back in once we have a sync status */}
-          {/* {!status.hasSynced ? <p>Busy with sync...</p> : <TodoListsWidget />} */}
+            <TodoListsWidget />
           <TodoListsWidget />
         </Box>
         <Dialog
